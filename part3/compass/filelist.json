@@ -1,0 +1,6 @@
+{
+    "top": "compass",
+    "files":
+    ["part3/compass/compass.sv"
+    ]
+}
