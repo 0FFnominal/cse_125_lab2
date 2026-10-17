@@ -5,5 +5,6 @@ module xnor2
 
    // For Lab 2, you may use assign statements!
    // Your code here:
+   assign c_o = ~(a_i ^ b_i);
 
 endmodule

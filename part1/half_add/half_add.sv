@@ -6,5 +6,6 @@ module half_add
 
    // For Lab 2, you may use assign statements!
    // Your code here:
-
+  assign carry_o = a_i & b_i;
+  assign sum_o = a_i ^ b_i;
 endmodule

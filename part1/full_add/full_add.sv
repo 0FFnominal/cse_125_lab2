@@ -7,5 +7,6 @@ module full_add
 
    // For Lab 2, you may use assign statements!
    // Your code here:
-
+  assign sum_o = a_i ^ b_i ^ carry_i;
+  assign carry_o = (a_i & b_i) | (a_i & carry_i) | (b_i & carry_i);
 endmodule
