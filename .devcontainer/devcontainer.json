@@ -1,20 +1,25 @@
 {
-  "build": { "dockerfile": "Dockerfile" },
-  "features": {
+  "build": {
+    "dockerfile": "Dockerfile"
   },
+  "features": {},
   "customizations": {
     "vscode": {
-	      "extensions": ["lramseyer.vaporview",
-                       "surfer-project.surfer",
-		                   "hediet.vscode-drawio",
-                       "analytic-signal.preview-pdf",
-                       "stephanvs.dot",
-                       "tomoki1207.pdf",
-                       "danielroedl.meld-diff",
-                       "bmpenuelas.waveform-render",
-                       "CS50.extension-uninstaller",
-		                   "SimonSiefke.svg-preview",]
-        ,
+      "extensions": [
+        "lramseyer.vaporview",
+        "surfer-project.surfer",
+        "hediet.vscode-drawio",
+        "analytic-signal.preview-pdf",
+        "stephanvs.dot",
+        "tomoki1207.pdf",
+        "danielroedl.meld-diff",
+        "bmpenuelas.waveform-render",
+        "CS50.extension-uninstaller",
+        "SimonSiefke.svg-preview",
+      ],
     }
   },
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/cse-x25-student/.ssh,type=bind,consistency=cached"
+  ]
 }
