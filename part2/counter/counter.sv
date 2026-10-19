@@ -9,8 +9,17 @@ module counter
    ,input [0:0] reset_i
    ,input [0:0] up_i
    ,input [0:0] down_i
-   ,output [width_p-1:0] count_o);
+   ,output logic [width_p-1:0] count_o);
 
    // Your code here:
-       
+
+  always_ff @(posedge clk_i) begin : next_count_ff
+    if (reset_i) begin
+      count_o <= reset_val_p;
+    end else if (up_i && !down_i) begin
+      count_o <= count_o + 1'b1;
+    end else if (down_i && !up_i) begin
+      count_o <= count_o - 1'b1;
+    end
+  end
 endmodule
