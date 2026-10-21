@@ -38,6 +38,8 @@ module compass
         STATE_0: begin
           if (direction_i == 2'b11) begin
             next_state = STATE_011;
+          end else if (direction_i == 2'b01) begin
+            next_state = STATE_01;
           end else if (direction_i[0] == 1'b0) begin
             next_state = STATE_0;
           end else begin

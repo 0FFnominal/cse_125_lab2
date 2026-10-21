@@ -18,7 +18,7 @@ module debounce
     .clk_i(clk_i),
     .reset_i(reset_i | !button_i),
     .up_i(button_i),
-    .down_i(0),
+    .down_i(1'b0),
     .count_o(count_o)
   );
 
